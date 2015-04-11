@@ -3,7 +3,6 @@
 #include "linkedList.h"
 
 const int max = 1000;
-int count = 0;
 
 void solver(list* pList){
   int a, b, c;
@@ -11,12 +10,8 @@ void solver(list* pList){
     for(b = 1; b <= a; b++)
       for(c = 1; c <= b; c++)
         if(a*a == b*b + c*c){
-          Pythagoras tmp = {};
-          tmp.a = a;
-          tmp.b = b;
-          tmp.c = c;
+          Pythagoras tmp = {a, b, c};
           addNode(pList, tmp);
-          count++;
         }
 }
 
