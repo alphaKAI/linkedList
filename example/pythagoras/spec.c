@@ -11,7 +11,7 @@ char* showElement(Pythagoras* element){
 
 char* varray(Pythagoras* p){
   char* buf = (char*)malloc(sizeof(char) * 20);
-  sprintf(buf, "(%d, %d, %d)%c", p->a, p->b, p->c, '\0');
+  sprintf(buf, "(%d, %d, %d)", p->a, p->b, p->c);
   return buf;
 }
 

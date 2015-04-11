@@ -3,7 +3,7 @@
 
 void addNode(list* parentList, TYPE newValue){
   listNode* newNode = (listNode*)malloc(sizeof(listNode));
-  newNode->value = newValue;
+  newNode->value    = newValue;
   newNode->nextNode = NULL;
 
   if(parentList->lastNode != NULL){
@@ -12,13 +12,13 @@ void addNode(list* parentList, TYPE newValue){
     parentList->lastNode = newNode;
   } else {
     parentList->firstNode = parentList->lastNode = newNode;
-    newNode->prevNode = NULL;
+    newNode->prevNode     = NULL;
   }
 }
 
 void freeList(list* parentList){
   for(parentList->thisNode = parentList->firstNode; parentList->thisNode != NULL;
-    parentList->thisNode = parentList->thisNode->nextNode)
+      parentList->thisNode = parentList->thisNode->nextNode)
     free(parentList->thisNode);
 }
 
@@ -79,7 +79,7 @@ listNode* pickupNode(list* parentList, TYPE key){
    for(parentList->thisNode = parentList->firstNode; parentList->thisNode != NULL;
       parentList->thisNode = parentList->thisNode->nextNode)
     if(compareElement(parentList->thisNode->value, key))
-       returnNode = parentList->thisNode;
+      returnNode = parentList->thisNode;
   return returnNode;
 }
 
