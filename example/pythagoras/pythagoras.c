@@ -22,9 +22,11 @@ void solver(list* pList){
 
 int main(){
   list pList = {};
+
   solver(&pList);
   Pythagoras* array = toArray(&pList);
   printAll(&pList);
 
+  freeList(&pList);
   return 0;
 }
